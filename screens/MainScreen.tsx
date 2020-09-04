@@ -26,7 +26,7 @@ function MainScreen({ navigation }) {
 
   const openDetailsScreen = React.useCallback(
     (data) => {
-      navigation.push("Details", data);
+      navigation.navigate("Details", data);
     },
     [navigation]
   );

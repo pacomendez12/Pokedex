@@ -15,9 +15,12 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.paco.pokedex"
     },
     "web": {
       "favicon": "./assets/images/favicon.png"
@@ -28,6 +31,12 @@
     "androidStatusBar": {
       "backgroundColor": "#c2252c",
       "barStyle": "light-content"
-    }
+    },
+    "sdkVersion": "38.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ]
   }
 }
