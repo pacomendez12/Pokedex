@@ -1,0 +1,1 @@
+export const SET_HAS_INTERNET = "SET_HAS_INTERNET";

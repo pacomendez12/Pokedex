@@ -1,5 +1,6 @@
 export type RootStackParamList = {
   Root: undefined;
+  Details: undefined;
   NotFound: undefined;
 };
 
@@ -14,4 +15,27 @@ export type TabOneParamList = {
 
 export type TabTwoParamList = {
   TabTwoScreen: undefined;
+};
+
+export type StoreElements = {
+  hasInternet: boolean;
+};
+
+export type AppPokemon = {
+  id: string;
+  name: string;
+  url: string;
+  thumbnailUrl: string;
+};
+
+export type ApiResponsePokemon = {
+  name: string;
+  url: string;
+};
+
+export type ApiResponse = {
+  count: number;
+  next: string | undefined;
+  previous: string | undefined;
+  results: ApiResponsePokemon[];
 };
