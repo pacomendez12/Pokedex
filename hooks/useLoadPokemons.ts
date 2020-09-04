@@ -8,7 +8,6 @@ import ApiUrls from "../constants/Url";
 import { useStateValue } from "../state";
 import { ApiResponsePokemon, ApiResponse, AppPokemon } from "../types";
 import { convertApiPokemonToAppPokemon } from "../util/pokemon";
-import { capitalize } from "../util/string";
 
 const ITEMS_PER_PAGE = 50;
 

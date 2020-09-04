@@ -40,7 +40,7 @@ function MainScreen({ navigation }) {
   }
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} colorName="background">
       <SearchBar onSearch={onSearch} />
       <PokemonGridView
         items={shouldShowSearched() ? searchedPokemon : pokemons}
@@ -57,7 +57,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#f3f3f3",
   },
 });
 

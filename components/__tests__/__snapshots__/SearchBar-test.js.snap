@@ -1,0 +1,198 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchBar> tests SearchBar renders correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+      },
+      Object {
+        "flexDirection": "row",
+        "height": 59,
+        "justifyContent": "center",
+        "paddingBottom": 10,
+        "paddingTop": 10,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#fff",
+        "flexGrow": 1,
+        "paddingHorizontal": 10,
+        "width": 100,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#f3f3f3",
+          "borderBottomWidth": 0,
+          "borderColor": "#86939e",
+          "borderRadius": 10,
+          "flexDirection": "row",
+          "height": 40,
+          "paddingLeft": 10,
+          "paddingRight": 10,
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#f3f3f3",
+            "height": 40,
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "paddingRight": 4,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "overflow": "hidden",
+            }
+          }
+        >
+          <View>
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "transparent",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "#8f8f91",
+                      "fontSize": 24,
+                    },
+                    Object {
+                      "backgroundColor": "transparent",
+                    },
+                    Object {
+                      "fontFamily": "ionicons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    Object {},
+                  ]
+                }
+                testID="iconIcon"
+              >
+                
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+      <TextInput
+        allowFontScaling={true}
+        editable={true}
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        onSubmitEditing={[Function]}
+        placeholder="Search"
+        placeholderTextColor="#86939e"
+        rejectResponderTermination={true}
+        style={
+          Object {
+            "alignSelf": "center",
+            "backgroundColor": "#f3f3f3",
+            "color": "#000",
+            "flex": 1,
+            "fontSize": 18,
+            "minHeight": 40,
+          }
+        }
+        testID="RNE__Input__text-input"
+        underlineColorAndroid="transparent"
+        value=""
+      />
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#f3f3f3",
+            "height": 40,
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "paddingRight": 4,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "overflow": "hidden",
+            }
+          }
+        >
+          <View>
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "transparent",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "#8f8f91",
+                      "fontSize": 24,
+                    },
+                    Object {
+                      "backgroundColor": "transparent",
+                    },
+                    Object {
+                      "fontFamily": "ionicons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    Object {},
+                  ]
+                }
+                testID="iconIcon"
+              >
+                
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+    <Text
+      style={
+        Object {
+          "color": "#ff190c",
+          "fontSize": 12,
+          "margin": 5,
+        }
+      }
+    />
+  </View>
+</View>
+`;

@@ -1,12 +1,11 @@
 // Image from: https://www.vhv.rs/dpng/d/371-3718139_image-of-pikachu-decal-cartoon-hd-png-download.png
-
 import i18n from "i18n-js";
 import * as React from "react";
 import { StyleSheet, Image } from "react-native";
 
 import { View, Text } from "./Themed";
 
-export default function Loading(props: { style?: object }) {
+export default function NoInternet(props: { style?: object }) {
   return (
     <View
       style={[

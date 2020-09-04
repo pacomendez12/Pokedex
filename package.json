@@ -9,7 +9,10 @@
     "test": "jest --watchAll"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "jest-expo",
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-native/extend-expect"
+    ]
   },
   "dependencies": {
     "@expo/vector-icons": "^10.0.0",
@@ -48,6 +51,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",
+    "@testing-library/jest-native": "^3.3.0",
+    "@testing-library/react-native": "^7.0.2",
     "@types/react": "~16.9.23",
     "@types/react-native": "~0.62.13",
     "@typescript-eslint/eslint-plugin": "^4.0.1",

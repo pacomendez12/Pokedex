@@ -5,7 +5,7 @@ import { Text, View } from "../components/Themed";
 
 export default function TextSeparator({ text }: { text: string }) {
   return (
-    <View style={styles.statsHeader}>
+    <View style={styles.statsHeader} colorName="secondaryBackground">
       <View style={[styles.line, { marginRight: 10 }]} />
       <Text style={styles.statsHeaderText}>{text}</Text>
       <View style={[styles.line, { marginLeft: 10 }]} />

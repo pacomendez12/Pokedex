@@ -46,7 +46,7 @@ export default function App() {
       <SafeAreaProvider>
         <StateProvider initialState={storeInitialState} reducer={reducer}>
           <Navigation colorScheme={colorScheme} />
-          <StatusBar style="light" backgroundColor="black" />
+          <StatusBar style="light" />
         </StateProvider>
       </SafeAreaProvider>
     );

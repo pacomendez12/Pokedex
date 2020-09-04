@@ -26,7 +26,7 @@
       "package": "com.paco.pokedex"
     },
     "androidStatusBar": {
-      "backgroundColor": "#000000",
+      "backgroundColor": "#c2252c",
       "barStyle": "light-content"
     }
   }

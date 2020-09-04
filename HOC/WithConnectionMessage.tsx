@@ -13,7 +13,9 @@ function renderErrorMessage() {
   );
 }
 
-export default function WithConnectionMessage(Component) {
+export default function WithConnectionMessage(
+  Component: React.FunctionComponent
+) {
   return (props: any) => {
     const [{ hasInternet }] = useStateValue();
 

@@ -3,6 +3,7 @@ import * as React from "react";
 import { StyleSheet } from "react-native";
 
 import { Text, View } from "../components/Themed";
+import Color from "../constants/Colors";
 
 const VISUAL_BAR_PERCENTAGE = 86;
 
@@ -25,7 +26,10 @@ export default function BarIndicator({
   const indicatorOffset = (percentage * VISUAL_BAR_PERCENTAGE) / 100;
 
   return (
-    <View style={[styles.slider, containerStyle]}>
+    <View
+      style={[styles.slider, containerStyle]}
+      colorName="secondaryBackground"
+    >
       <View style={{ flexDirection: "row" }}>
         <LinearGradient
           colors={["#1f7dd0", "#45a2c8"]}
@@ -36,7 +40,9 @@ export default function BarIndicator({
         <View style={[styles.bar, { width: `${100 - percentage}%` }]} />
       </View>
       <View style={[styles.indicator, { left: `${indicatorOffset}%` }]}>
-        <Text style={styles.value}>{value}</Text>
+        <Text style={styles.value} darkColor={Color.light.text}>
+          {value}
+        </Text>
       </View>
     </View>
   );
@@ -61,7 +67,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 3,
     width: "15%",
-    // minWidth: 40,
     justifyContent: "center",
     alignItems: "center",
     position: "absolute",

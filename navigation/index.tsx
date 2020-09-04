@@ -5,10 +5,12 @@ import {
   DarkTheme,
 } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import i18n from "i18n-js";
 import * as React from "react";
 import { ColorSchemeName, Image, StyleSheet } from "react-native";
 
 import { SET_HAS_INTERNET } from "../actionTypes";
+import Color from "../constants/Colors";
 import DetailsScreen from "../screens/DetailsScreen";
 import MainScreen from "../screens/MainScreen";
 import NotFoundScreen from "../screens/NotFoundScreen";
@@ -16,19 +18,15 @@ import { useStateValue } from "../state";
 import { RootStackParamList } from "../types";
 import LinkingConfiguration from "./LinkingConfiguration";
 
-// If you are not familiar with React Navigation, we recommend going through the
-// "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
 export default function Navigation({
   colorScheme,
 }: {
   colorScheme: ColorSchemeName;
 }) {
-  const [state, dispatch] = useStateValue();
+  const [, dispatch] = useStateValue();
 
   React.useEffect(() => {
     const unsubscribe = NetInfo.addEventListener((state) => {
-      console.log("Connection type", state.type);
-      console.log("Is connected?", state.isConnected);
       dispatch({ type: SET_HAS_INTERNET, payload: state.isConnected });
     });
 
@@ -45,8 +43,6 @@ export default function Navigation({
   );
 }
 
-// A root stack navigator is often used for displaying modals on top of all other content
-// Read more here: https://reactnavigation.org/docs/modal
 const Stack = createStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
@@ -64,7 +60,7 @@ function RootNavigator() {
       <Stack.Screen
         name="Details"
         component={DetailsScreen}
-        options={{ headerBackTitle: "Back" }}
+        options={{ headerBackTitle: i18n.t("Back") }}
       />
       <Stack.Screen
         name="NotFound"
@@ -85,7 +81,7 @@ function HeaderLogo() {
 }
 
 const styles = StyleSheet.create({
-  header: { backgroundColor: "#c2252c" },
+  header: { backgroundColor: Color.shared.appColor },
   headerLogo: {
     width: 110,
     height: 40,

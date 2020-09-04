@@ -13,11 +13,15 @@ type Stats = {
 
 export default function StatisticsViewer({ stats }: { stats: Stats[] }) {
   return (
-    <View style={styles.mainContainer}>
+    <View style={styles.mainContainer} colorName="secondaryBackground">
       <TextSeparator text={i18n.t("STATISTICS")} />
-      {stats.map((stat) => {
+      {stats?.map((stat) => {
         return (
-          <View key={stat.name} style={styles.barsContainer}>
+          <View
+            key={stat.name}
+            style={styles.barsContainer}
+            colorName="secondaryBackground"
+          >
             <Text numberOfLines={1} style={{ flex: 2, color: "gray" }}>
               {stat.name}
             </Text>

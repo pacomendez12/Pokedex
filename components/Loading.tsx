@@ -1,3 +1,4 @@
+// Image from: https://i.pinimg.com/originals/25/d2/54/25d254df236c61306bceb86df5f671f1.gif
 import i18n from "i18n-js";
 import * as React from "react";
 import { StyleSheet, Image } from "react-native";

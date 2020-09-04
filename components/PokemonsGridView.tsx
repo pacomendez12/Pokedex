@@ -1,11 +1,5 @@
 import * as React from "react";
-import {
-  StyleSheet,
-  TouchableHighlight,
-  // Image,
-  Dimensions,
-  ActivityIndicator,
-} from "react-native";
+import { StyleSheet, TouchableHighlight, Dimensions } from "react-native";
 import { Image } from "react-native-expo-image-cache";
 
 import GridView from "../components/GridView";
@@ -16,14 +10,6 @@ const dimensions = Dimensions.get("window");
 const itemSize = (dimensions.width - 25) / 3;
 
 const keyExtractor = (item: AppPokemon, index: number) => item.id;
-
-const renderLoading = () => {
-  return (
-    <View style={{ alignContent: "center", backgroundColor: "transparent" }}>
-      <ActivityIndicator size="small" color="#c2252c" />
-    </View>
-  );
-};
 
 export default function PokemonGridView(props: {
   items: AppPokemon[];
@@ -38,7 +24,7 @@ export default function PokemonGridView(props: {
         underlayColor="#dddddd"
         onPress={() => props.openDetailsScreen(item)}
       >
-        <View style={styles.item}>
+        <View style={styles.item} colorName="secondaryBackground">
           <Image uri={item.thumbnailUrl} style={styles.itemImage} />
           <Text>{item.name}</Text>
         </View>
@@ -47,9 +33,8 @@ export default function PokemonGridView(props: {
   };
 
   return (
-    <View style={styles.gridContainer}>
+    <View style={styles.gridContainer} colorName="background">
       <GridView {...props} renderer={renderItem} keyExtractor={keyExtractor} />
-      {/* {props.showLoading && renderLoading()} */}
     </View>
   );
 }
@@ -62,7 +47,6 @@ const styles = StyleSheet.create({
     marginRight: 3,
     flexGrow: 1,
     alignSelf: "stretch",
-    backgroundColor: "#f3f3f3",
   },
   item: {
     flex: 1,

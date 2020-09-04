@@ -22,7 +22,6 @@ export default function GridView({
       keyExtractor={keyExtractor}
       contentContainerStyle={styles.container}
       onEndReached={onEndReached}
-      // onEndReachedThreshold={2}
       initialNumToRender={50}
       removeClippedSubviews
     />
